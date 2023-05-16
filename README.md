@@ -9,6 +9,8 @@
 * Mockito
 * MySQL
 * Flyway
+* Spring Boot 3.0.6
+* Actuator [http://localhost:8080/actuator]
 
 ### Execução do projeto:
 #### Navegar até o diretório onde foi clonado o projeto e execute o comando `docker compose up -d`
