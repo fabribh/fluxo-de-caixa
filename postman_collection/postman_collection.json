@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "08e0cac4-953c-4561-aa05-20000b2318e0",
+		"name": "Fluxo de Caixa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4039810"
+	},
+	"item": [
+		{
+			"name": "Create Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"operation_type_id\" : 1, // 1 = Crédito or 2 = Débito\n    \"amount\" : 15.50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consolidado Diário",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/transactions?page=1&size=10&sort=id&startDate=2023-05-11&endDate=2023-05-16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "id"
+						},
+						{
+							"key": "startDate",
+							"value": "2023-05-11"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-05-16"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
